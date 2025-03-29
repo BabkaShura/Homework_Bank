@@ -35,7 +35,7 @@ def get_date(date_str: str) -> str:
     return f"{day}.{month}.{year}"
 
 
-def main():
+def main() -> None:
     while True:
         print("\nВыберите действие:")
         print("1. Маскировать номер карты/счета")
