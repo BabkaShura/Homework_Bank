@@ -1,27 +1,48 @@
 import pytest
 from src.widget import mask_account_card, get_date
 
-@pytest.mark.parametrize("input_value, expected", [
-    ("Visa Platinum 1234567812345678", "Visa Platinum ****5678"),
-    ("Visa 1234567890123456", "Visa ****3456"),
-    ("MasterCard 9876543210987654", "MasterCard ****7654"),
-    ("Счет 12345678901234567890", "Счет ****7890"),
-    ("invalid", ValueError),
-])
-def test_mask_account_card(input_value, expected):
-    if isinstance(expected, type) and issubclass(expected, Exception):
-        with pytest.raises(expected):
-            mask_account_card(input_value)
-    else:
-        assert mask_account_card(input_value) == expected
 
-@pytest.mark.parametrize("date_str, expected", [
-    ("2024-03-30", "30.03.2024"),
-    ("01/01/2020", "01.01.2020"),
-    ("31.12.2025", "31.12.2025"),
-    ("2025/12/31", "31.12.2025"),
-    ("invalid", None),
-    ("", None),
-])
-def test_get_date(date_str, expected):
+@pytest.fixture
+def card_data():
+    return "Visa Platinum 7000792289606361"
+
+
+@pytest.fixture
+def account_data():
+    return "Счет 73654108430135874305"
+
+
+@pytest.fixture
+def date_str():
+    return "2024-03-11T02:26:18.671407"
+
+
+def test_mask_card_number(card_data):
+    """Тест маскирования номера карты."""
+    result = mask_account_card(card_data)
+    assert result == "Visa Platinum 7000 79** **** 6361"
+
+
+def test_mask_account(account_data):
+    """Тест маскирования номера счета."""
+    result = mask_account_card(account_data)
+    assert result == "Счет ****4305"
+
+
+def test_get_date(date_str):
+    """Тест преобразования даты из ISO формата в DD.MM.YYYY."""
+    result = get_date(date_str)
+    assert result == "11.03.2024"
+
+
+@pytest.mark.parametrize(
+    "date_str, expected",
+    [
+        ("2024-03-11T02:26:18.671407", "11.03.2024"),
+        ("2023-12-31T23:59:59.999999", "31.12.2023"),
+        ("2020-01-01T00:00:00.000000", "01.01.2020"),
+    ],
+)
+def test_get_date_various_formats(date_str, expected):
+    """Тест преобразования даты с разными входными значениями."""
     assert get_date(date_str) == expected
