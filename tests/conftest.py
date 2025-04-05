@@ -1,4 +1,6 @@
 import pytest
+
+
 @pytest.fixture
 def make_transactions1() -> list:
     """Фикстура для функции фильтрации по коду валюты - норма"""

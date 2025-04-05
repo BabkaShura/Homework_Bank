@@ -1,6 +1,8 @@
 import pytest
 
-from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
+from src.generators import card_number_generator
+from src.generators import filter_by_currency
+from src.generators import transaction_descriptions
 
 
 @pytest.mark.parametrize(
@@ -188,7 +190,7 @@ def test_card_number_generator3() -> None:
 def test_card_number_generator4() -> None:
     """Тест для генератора номеров карт - для start введено нецифровое значение"""
     with pytest.raises(TypeError, match="Неверный формат данных!"):
-        list(card_number_generator("1", 4))
+        list(card_number_generator("1", 4))  # type: ignore[arg-type]
 
 
 def test_card_number_generator5() -> None:
