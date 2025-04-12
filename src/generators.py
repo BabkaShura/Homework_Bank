@@ -1,5 +1,7 @@
 from typing import Any
 
+from src.decorators import log
+
 transaction_list = [
     {
         "id": 939719570,
@@ -49,6 +51,7 @@ transaction_list = [
 ]
 
 
+@log("mylog.txt")
 def filter_by_currency(transaction_list: list, currency: str) -> Any:
     """Функция обрабатывает список транзакций и поочередно
     выдает транзакции, где валюта операции соответствует заданной"""
@@ -77,6 +80,7 @@ for transaction in result:
     print(transaction)
 
 
+@log("mylog.txt")
 def transaction_descriptions(transaction_list: list) -> Any:
     """Функция обрабатывает список транзакций и поочередно
     возвращает описание каждой из них"""
@@ -92,6 +96,7 @@ for transaction in item:
     print(transaction)
 
 
+@log("mylog.txt")
 def card_number_generator(start: int, stop: int) -> Any:
     """Функция представляет собой генератор номеров банковских карт:
     создает номера в заданном диапазоне и возвращает их

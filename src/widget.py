@@ -1,7 +1,9 @@
+from src.decorators import log
 from src.masks import get_mask_account
 from src.masks import get_mask_card_number
 
 
+@log("mylog.txt")
 def mask_account_card(data: str) -> str:
     """
     Маскирует номер карты или счета.
@@ -24,6 +26,7 @@ def mask_account_card(data: str) -> str:
     raise ValueError("Некорректный номер карты или счета")
 
 
+@log("mylog.txt")
 def get_date(date_str: str) -> str:
     """
     Преобразует дату из формата "2024-03-11T02:26:18.671407" в "ДД/ММ/ГГГГ".

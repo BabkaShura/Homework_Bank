@@ -1,7 +1,10 @@
 import re
 from typing import Union
 
+from src.decorators import log
 
+
+@log("mylog.txt")
 def get_mask_card_number(card_number: Union[str]) -> Union[str]:
     """Возвращает замаскированный номер карты в формате XXXX XX** **** XXXX."""
     if len(card_number) not in {16, 0, 4}:
@@ -15,6 +18,7 @@ def get_mask_card_number(card_number: Union[str]) -> Union[str]:
     return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
 
 
+@log("mylog.txt")
 def get_mask_account(account_number: str) -> str:
     """Возвращает замаскированный номер счета в формате **XXXX."""
     if not account_number:

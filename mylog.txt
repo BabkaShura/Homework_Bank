@@ -1,0 +1,36 @@
+get_mask_card_number started with arguments: ('1234567891234678',), {}
+Execution time: 0:00:00.000102
+get_mask_card_number ended -> OK
+Results: 1234 56** **** 4678
+get_mask_card_number started with arguments: ('1234567891234678',), {}
+Execution time: 0:00:00.000157
+get_mask_card_number ended -> OK
+Results: 1234 56** **** 4678
+get_mask_account started with arguments: ('12345678901234567890',), {}
+Execution time: 0:00:00.000083
+get_mask_account ended -> OK
+Results: ****7890
+filter_by_state started with arguments: ([{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'}, {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}],), {}
+Execution time: 0:00:00.000041
+filter_by_state ended -> OK
+Results: [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
+sort_by_date started with arguments: ([{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'}, {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}],), {}
+Execution time: 0:00:00.000061
+sort_by_date ended -> OK
+Results: [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364', 'parsed_date': datetime.datetime(2019, 7, 3, 18, 35, 29, 512364)}, {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441', 'parsed_date': datetime.datetime(2018, 10, 14, 8, 21, 33, 419441)}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689', 'parsed_date': datetime.datetime(2018, 9, 12, 21, 27, 25, 241689)}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'parsed_date': datetime.datetime(2018, 6, 30, 2, 8, 58, 425572)}]
+get_mask_card_number started with arguments: ('1234567891234678',), {}
+Execution time: 0:00:00.000120
+get_mask_card_number ended -> OK
+Results: 1234 56** **** 4678
+get_mask_account started with arguments: ('12345678901234567890',), {}
+Execution time: 0:00:00.000062
+get_mask_account ended -> OK
+Results: ****7890
+filter_by_state started with arguments: ([{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'}, {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}],), {}
+Execution time: 0:00:00.000014
+filter_by_state ended -> OK
+Results: [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
+sort_by_date started with arguments: ([{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'}, {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}],), {}
+Execution time: 0:00:00.000015
+sort_by_date ended -> OK
+Results: [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364', 'parsed_date': datetime.datetime(2019, 7, 3, 18, 35, 29, 512364)}, {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441', 'parsed_date': datetime.datetime(2018, 10, 14, 8, 21, 33, 419441)}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689', 'parsed_date': datetime.datetime(2018, 9, 12, 21, 27, 25, 241689)}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'parsed_date': datetime.datetime(2018, 6, 30, 2, 8, 58, 425572)}]
