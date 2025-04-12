@@ -1,7 +1,13 @@
+from src.generators import card_number_generator
+from src.generators import filter_by_currency
+from src.generators import transaction_descriptions
+from src.generators import transaction_list
 from src.masks import get_mask_account
 from src.masks import get_mask_card_number
 from src.processing import filter_by_state
 from src.processing import sort_by_date
+from src.widget import get_date
+from src.widget import mask_account_card
 
 # Проверка функции маскировки номера карты
 print(get_mask_card_number("1234567891234678"))
@@ -24,3 +30,33 @@ print("Отфильтрованные транзакции (EXECUTED):", filtere
 # Проверка функции сортировки по дате
 sorted_transactions = sort_by_date(transactions)
 print("Отсортированные транзакции (по убыванию):", sorted_transactions)
+
+# Проверка функции маскировки карты или счета по строке
+try:
+    print(mask_account_card("Visa Platinum 7000792289606361"))  # номер карты
+    print(mask_account_card("Счет 12345678901234567890"))  # номер счета
+except ValueError as e:
+    print("Ошибка:", e)
+
+# Проверка функции преобразования даты
+print(get_date("2024-03-11T02:26:18.671407"))
+
+# Вызов filter_by_currency
+print("=== Транзакции в валюте USD ===")
+currency_result = filter_by_currency(transaction_list, currency="USD")
+for tx in currency_result:
+    print(tx)
+
+# Вызов transaction_descriptions
+print("\n=== Описания всех транзакций ===")
+descriptions = transaction_descriptions(transaction_list)
+for desc in descriptions:
+    print(desc)
+
+# Вызов card_number_generator
+print("\n=== Генерация номеров карт от 1 до 5 ===")
+try:
+    for card in card_number_generator(1, 6):
+        print(card)
+except (TypeError, ValueError) as e:
+    print(f"Ошибка при генерации номеров карт: {e}")

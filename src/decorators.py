@@ -1,5 +1,6 @@
 import datetime
-from typing import Any, Optional
+from typing import Any
+from typing import Optional
 
 
 def log(filename: Optional[str] = None) -> Any:
