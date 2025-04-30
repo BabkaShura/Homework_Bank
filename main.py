@@ -1,3 +1,4 @@
+from src.external_api import convert_to_rub
 from src.generators import card_number_generator
 from src.generators import filter_by_currency
 from src.generators import transaction_descriptions
@@ -6,6 +7,7 @@ from src.masks import get_mask_account
 from src.masks import get_mask_card_number
 from src.processing import filter_by_state
 from src.processing import sort_by_date
+from src.utils import load_transactions
 from src.widget import get_date
 from src.widget import mask_account_card
 
@@ -60,3 +62,8 @@ try:
         print(card)
 except (TypeError, ValueError) as e:
     print(f"Ошибка при генерации номеров карт: {e}")
+
+
+data = load_transactions("data/operations.json")
+for tx in data:
+    print(convert_to_rub(tx))

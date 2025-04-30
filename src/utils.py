@@ -1,5 +1,6 @@
 import json
-from typing import List, Dict
+from typing import Dict
+from typing import List
 
 
 def load_transactions(filepath: str) -> List[Dict]:
@@ -10,7 +11,7 @@ def load_transactions(filepath: str) -> List[Dict]:
     :return: список транзакций или пустой список
     """
     try:
-        with open(filepath, 'r', encoding='utf-8') as file:
+        with open(filepath, "r", encoding="utf-8") as file:
             data = json.load(file)
             if isinstance(data, list):
                 return data
