@@ -1,13 +1,17 @@
 from datetime import datetime
 from typing import List
 
+from src.decorators import log
 
+
+@log("mylog.txt")
 def filter_by_state(data: List[dict], state: str = "EXECUTED") -> List[dict]:
     if not isinstance(data, list):
         raise TypeError("Ожидается список словарей")
     return [item for item in data if item.get("state") == state]
 
 
+@log("mylog.txt")
 def sort_by_date(data: List[dict], order: str = "desc") -> List[dict]:
     if not isinstance(data, list):
         raise TypeError("Ожидается список словарей")
