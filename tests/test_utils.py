@@ -1,4 +1,3 @@
-
 from pathlib import Path
 
 from src.utils import load_transactions
