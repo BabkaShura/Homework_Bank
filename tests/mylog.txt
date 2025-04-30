@@ -1,0 +1,28 @@
+get_mask_account started with arguments: ('12345678901234567890',), {}
+Execution time: 0:00:00.000033
+get_mask_account ended -> OK
+Results: ****7890
+get_mask_account started with arguments: ('98765432109876543210',), {}
+Execution time: 0:00:00.000006
+get_mask_account ended -> OK
+Results: ****3210
+get_mask_account started with arguments: ('1234567890123456',), {}
+get_mask_account raised an error
+Error type: ValueError
+Error message: Некорректный номер счета. Должно быть 20 цифр.
+Execution time before error: 0:00:00.000004
+get_mask_account started with arguments: ('98765432',), {}
+get_mask_account raised an error
+Error type: ValueError
+Error message: Некорректный номер счета. Должно быть 20 цифр.
+Execution time before error: 0:00:00.000005
+get_mask_account started with arguments: ('123',), {}
+get_mask_account raised an error
+Error type: ValueError
+Error message: Некорректный номер счета. Должно быть 20 цифр.
+Execution time before error: 0:00:00.000003
+get_mask_account started with arguments: ('',), {}
+get_mask_account raised an error
+Error type: ValueError
+Error message: Номер счета не может быть пустым.
+Execution time before error: 0:00:00.000003
