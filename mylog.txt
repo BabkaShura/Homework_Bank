@@ -58,3 +58,195 @@ card_number_generator started with arguments: (1, 6), {}
 Execution time: 0:00:00.000001
 card_number_generator ended -> OK
 Results: <generator object card_number_generator at 0x104b8e320>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}, {'id': 873106923, 'state': 'EXECUTED', 'date': '2019-03-23T01:09:46.296404', 'operationAmount': {'amount': '43318.34', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 44812258784861134719', 'to': 'Счет 74489636417521191160'}, {'id': 895315941, 'state': 'EXECUTED', 'date': '2018-08-19T04:27:37.904916', 'operationAmount': {'amount': '56883.54', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод с карты на карту', 'from': 'Visa Classic 6831982476737658', 'to': 'Visa Platinum 8990922113665229'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689', 'operationAmount': {'amount': '67314.70', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод организации', 'from': 'Visa Platinum 1246377376343588', 'to': 'Счет 14211924144426031657'}],), {'currency': 'USD'}
+Execution time: 0:00:00.000021
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102a229b0>
+transaction_descriptions started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}, {'id': 873106923, 'state': 'EXECUTED', 'date': '2019-03-23T01:09:46.296404', 'operationAmount': {'amount': '43318.34', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 44812258784861134719', 'to': 'Счет 74489636417521191160'}, {'id': 895315941, 'state': 'EXECUTED', 'date': '2018-08-19T04:27:37.904916', 'operationAmount': {'amount': '56883.54', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод с карты на карту', 'from': 'Visa Classic 6831982476737658', 'to': 'Visa Platinum 8990922113665229'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689', 'operationAmount': {'amount': '67314.70', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод организации', 'from': 'Visa Platinum 1246377376343588', 'to': 'Счет 14211924144426031657'}],), {}
+Execution time: 0:00:00.000012
+transaction_descriptions ended -> OK
+Results: <generator object transaction_descriptions at 0x102a3de00>
+card_number_generator started with arguments: (1, 6), {}
+Execution time: 0:00:00.000002
+card_number_generator ended -> OK
+Results: <generator object card_number_generator at 0x102a457e0>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}, {'id': 873106923, 'state': 'EXECUTED', 'date': '2019-03-23T01:09:46.296404', 'operationAmount': {'amount': '43318.34', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 44812258784861134719', 'to': 'Счет 74489636417521191160'}, {'id': 895315941, 'state': 'EXECUTED', 'date': '2018-08-19T04:27:37.904916', 'operationAmount': {'amount': '56883.54', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод с карты на карту', 'from': 'Visa Classic 6831982476737658', 'to': 'Visa Platinum 8990922113665229'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689', 'operationAmount': {'amount': '67314.70', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод организации', 'from': 'Visa Platinum 1246377376343588', 'to': 'Счет 14211924144426031657'}], 'USD'), {}
+Execution time: 0:00:00.000019
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b03370>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}, {'id': 873106923, 'state': 'EXECUTED', 'date': '2019-03-23T01:09:46.296404', 'operationAmount': {'amount': '43318.34', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 44812258784861134719', 'to': 'Счет 74489636417521191160'}, {'id': 895315941, 'state': 'EXECUTED', 'date': '2018-08-19T04:27:37.904916', 'operationAmount': {'amount': '56883.54', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод с карты на карту', 'from': 'Visa Classic 6831982476737658', 'to': 'Visa Platinum 8990922113665229'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689', 'operationAmount': {'amount': '67314.70', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод организации', 'from': 'Visa Platinum 1246377376343588', 'to': 'Счет 14211924144426031657'}], 'RUB'), {}
+Execution time: 0:00:00.000020
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b01cb0>
+filter_by_currency started with arguments: ([], 'USD'), {}
+Execution time: 0:00:00.000002
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b028e0>
+filter_by_currency started with arguments: ([], 'RUB'), {}
+Execution time: 0:00:00.000003
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b01cb0>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': '', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}], 'USD'), {}
+Execution time: 0:00:00.000009
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b02b50>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': '', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}], 'RUB'), {}
+Execution time: 0:00:00.000007
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b02b50>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', '': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}], 'USD'), {}
+Execution time: 0:00:00.000008
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b01150>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', '': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}], 'RUB'), {}
+Execution time: 0:00:00.000007
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b01cb0>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'Amount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}], 'USD'), {}
+Execution time: 0:00:00.000007
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b018a0>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'Amount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}], 'RUB'), {}
+Execution time: 0:00:00.000007
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b02f60>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}, {'id': 873106923, 'state': 'EXECUTED', 'date': '2019-03-23T01:09:46.296404', 'operationAmount': {'amount': '43318.34', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 44812258784861134719', 'to': 'Счет 74489636417521191160'}, {'id': 895315941, 'state': 'EXECUTED', 'date': '2018-08-19T04:27:37.904916', 'operationAmount': {'amount': '56883.54', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод с карты на карту', 'from': 'Visa Classic 6831982476737658', 'to': 'Visa Platinum 8990922113665229'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689', 'operationAmount': {'amount': '67314.70', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод организации', 'from': 'Visa Platinum 1246377376343588', 'to': 'Счет 14211924144426031657'}], 'CNY'), {}
+Execution time: 0:00:00.000017
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b03850>
+filter_by_currency started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}, {'id': 873106923, 'state': 'EXECUTED', 'date': '2019-03-23T01:09:46.296404', 'operationAmount': {'amount': '43318.34', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 44812258784861134719', 'to': 'Счет 74489636417521191160'}, {'id': 895315941, 'state': 'EXECUTED', 'date': '2018-08-19T04:27:37.904916', 'operationAmount': {'amount': '56883.54', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод с карты на карту', 'from': 'Visa Classic 6831982476737658', 'to': 'Visa Platinum 8990922113665229'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689', 'operationAmount': {'amount': '67314.70', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод организации', 'from': 'Visa Platinum 1246377376343588', 'to': 'Счет 14211924144426031657'}], 'EUR'), {}
+Execution time: 0:00:00.000011
+filter_by_currency ended -> OK
+Results: <generator object filter_by_currency at 0x102b01150>
+transaction_descriptions started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': {'amount': '9824.07', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод организации', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}, {'id': 873106923, 'state': 'EXECUTED', 'date': '2019-03-23T01:09:46.296404', 'operationAmount': {'amount': '43318.34', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 44812258784861134719', 'to': 'Счет 74489636417521191160'}, {'id': 895315941, 'state': 'EXECUTED', 'date': '2018-08-19T04:27:37.904916', 'operationAmount': {'amount': '56883.54', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод с карты на карту', 'from': 'Visa Classic 6831982476737658', 'to': 'Visa Platinum 8990922113665229'}, {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689', 'operationAmount': {'amount': '67314.70', 'currency': {'name': 'руб.', 'code': 'RUB'}}, 'description': 'Перевод организации', 'from': 'Visa Platinum 1246377376343588', 'to': 'Счет 14211924144426031657'}],), {}
+Execution time: 0:00:00.000012
+transaction_descriptions ended -> OK
+Results: <generator object transaction_descriptions at 0x102b39d20>
+transaction_descriptions started with arguments: ([],), {}
+Execution time: 0:00:00.000002
+transaction_descriptions ended -> OK
+Results: <generator object transaction_descriptions at 0x102b39d20>
+transaction_descriptions started with arguments: ([{'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572', 'operationAmount': '', 'from': 'Счет 75106830613657916952', 'to': 'Счет 11776614605963066702'}, {'id': 142264268, 'state': 'EXECUTED', 'date': '2019-04-04T23:20:05.206878', 'operationAmount': {'amount': '79114.93', 'currency': {'name': 'USD', 'code': 'USD'}}, 'description': 'Перевод со счета на счет', 'from': 'Счет 19708645243227258542', 'to': 'Счет 75651667383060284188'}],), {}
+Execution time: 0:00:00.000006
+transaction_descriptions ended -> OK
+Results: <generator object transaction_descriptions at 0x102b39d20>
+card_number_generator started with arguments: (1, 2), {}
+Execution time: 0:00:00.000002
+card_number_generator ended -> OK
+Results: <generator object card_number_generator at 0x102ab7640>
+card_number_generator started with arguments: (1, 6), {}
+Execution time: 0:00:00.000001
+card_number_generator ended -> OK
+Results: <generator object card_number_generator at 0x102ab7520>
+card_number_generator started with arguments: (6, 4), {}
+Execution time: 0:00:00.000002
+card_number_generator ended -> OK
+Results: <generator object card_number_generator at 0x102ab7520>
+card_number_generator started with arguments: (-6, 4), {}
+Execution time: 0:00:00.000001
+card_number_generator ended -> OK
+Results: <generator object card_number_generator at 0x102ab7760>
+card_number_generator started with arguments: ('1', 4), {}
+Execution time: 0:00:00.000002
+card_number_generator ended -> OK
+Results: <generator object card_number_generator at 0x102ab7760>
+card_number_generator started with arguments: (5, 4785694356489535864), {}
+Execution time: 0:00:00.000002
+card_number_generator ended -> OK
+Results: <generator object card_number_generator at 0x102ab7760>
+card_number_generator started with arguments: (4, 4), {}
+Execution time: 0:00:00.000002
+card_number_generator ended -> OK
+Results: <generator object card_number_generator at 0x102ab7760>
+card_number_generator started with arguments: (99, 101), {}
+Execution time: 0:00:00.000001
+card_number_generator ended -> OK
+Results: <generator object card_number_generator at 0x102ab7640>
+get_mask_card_number started with arguments: ('1234567812345678',), {}
+Execution time: 0:00:00.000090
+get_mask_card_number ended -> OK
+Results: 1234 56** **** 5678
+get_mask_card_number started with arguments: ('9876543210987654',), {}
+Execution time: 0:00:00.000005
+get_mask_card_number ended -> OK
+Results: 9876 54** **** 7654
+get_mask_card_number started with arguments: ('1234',), {}
+Execution time: 0:00:00.000002
+get_mask_card_number ended -> OK
+Results: 1234
+get_mask_card_number started with arguments: ('',), {}
+Execution time: 0:00:00.000002
+get_mask_card_number ended -> 
+Results: 
+get_mask_account started with arguments: ('12345678901234567890',), {}
+Execution time: 0:00:00.000077
+get_mask_account ended -> OK
+Results: ****7890
+get_mask_account started with arguments: ('98765432109876543210',), {}
+Execution time: 0:00:00.000005
+get_mask_account ended -> OK
+Results: ****3210
+get_mask_account started with arguments: ('1234567890123456',), {}
+get_mask_account raised an error
+Error type: ValueError
+Error message: Некорректный номер счета. Должно быть 20 цифр.
+Execution time before error: 0:00:00.000004
+get_mask_account started with arguments: ('98765432',), {}
+get_mask_account raised an error
+Error type: ValueError
+Error message: Некорректный номер счета. Должно быть 20 цифр.
+Execution time before error: 0:00:00.000013
+get_mask_account started with arguments: ('123',), {}
+get_mask_account raised an error
+Error type: ValueError
+Error message: Некорректный номер счета. Должно быть 20 цифр.
+Execution time before error: 0:00:00.000004
+get_mask_account started with arguments: ('',), {}
+get_mask_account raised an error
+Error type: ValueError
+Error message: Номер счета не может быть пустым.
+Execution time before error: 0:00:00.000003
+filter_by_state started with arguments: ([{'id': 1, 'state': 'active', 'date': '2024-01-01'}, {'id': 2, 'state': 'inactive', 'date': '2023-12-01'}, {'id': 3, 'state': 'active', 'date': '2024-02-15'}], 'active'), {}
+Execution time: 0:00:00.000009
+filter_by_state ended -> OK
+Results: [{'id': 1, 'state': 'active', 'date': '2024-01-01'}, {'id': 3, 'state': 'active', 'date': '2024-02-15'}]
+sort_by_date started with arguments: ([{'id': 1, 'state': 'active', 'date': '2024-01-01'}, {'id': 2, 'state': 'inactive', 'date': '2023-12-01'}, {'id': 3, 'state': 'active', 'date': '2024-02-15'}], 'asc'), {}
+Execution time: 0:00:00.000013
+sort_by_date ended -> OK
+Results: [{'id': 2, 'state': 'inactive', 'date': '2023-12-01', 'parsed_date': datetime.datetime(2023, 12, 1, 0, 0)}, {'id': 1, 'state': 'active', 'date': '2024-01-01', 'parsed_date': datetime.datetime(2024, 1, 1, 0, 0)}, {'id': 3, 'state': 'active', 'date': '2024-02-15', 'parsed_date': datetime.datetime(2024, 2, 15, 0, 0)}]
+sort_by_date started with arguments: ([{'id': 1, 'state': 'active', 'date': '2024-01-01'}, {'id': 2, 'state': 'inactive', 'date': '2023-12-01'}, {'id': 3, 'state': 'active', 'date': '2024-02-15'}], 'desc'), {}
+Execution time: 0:00:00.000007
+sort_by_date ended -> OK
+Results: [{'id': 3, 'state': 'active', 'date': '2024-02-15', 'parsed_date': datetime.datetime(2024, 2, 15, 0, 0)}, {'id': 1, 'state': 'active', 'date': '2024-01-01', 'parsed_date': datetime.datetime(2024, 1, 1, 0, 0)}, {'id': 2, 'state': 'inactive', 'date': '2023-12-01', 'parsed_date': datetime.datetime(2023, 12, 1, 0, 0)}]
+get_mask_card_number started with arguments: ('7000792289606361',), {}
+Execution time: 0:00:00.000005
+get_mask_card_number ended -> OK
+Results: 7000 79** **** 6361
+mask_account_card started with arguments: ('Visa Platinum 7000792289606361',), {}
+Execution time: 0:00:00.000045
+mask_account_card ended -> OK
+Results: Visa Platinum 7000 79** **** 6361
+get_mask_account started with arguments: ('73654108430135874305',), {}
+Execution time: 0:00:00.000004
+get_mask_account ended -> OK
+Results: ****4305
+mask_account_card started with arguments: ('Счет 73654108430135874305',), {}
+Execution time: 0:00:00.000036
+mask_account_card ended -> OK
+Results: Счет ****4305
+get_date started with arguments: ('2024-03-11T02:26:18.671407',), {}
+Execution time: 0:00:00.000005
+get_date ended -> OK
+Results: 11.03.2024
+get_date started with arguments: ('2024-03-11T02:26:18.671407',), {}
+Execution time: 0:00:00.000003
+get_date ended -> OK
+Results: 11.03.2024
+get_date started with arguments: ('2023-12-31T23:59:59.999999',), {}
+Execution time: 0:00:00.000003
+get_date ended -> OK
+Results: 31.12.2023
+get_date started with arguments: ('2020-01-01T00:00:00.000000',), {}
+Execution time: 0:00:00.000002
+get_date ended -> OK
+Results: 01.01.2020
