@@ -1,0 +1,8 @@
+get_mask_card_number started with arguments: ('1234567812345678',), {}
+Execution time: 0:00:00.000246
+get_mask_card_number ended -> OK
+Results: 1234 56** **** 5678
+get_mask_account started with arguments: ('40817810099910004312',), {}
+Execution time: 0:00:00.000105
+get_mask_account ended -> OK
+Results: ****4312

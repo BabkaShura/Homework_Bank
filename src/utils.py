@@ -2,6 +2,10 @@ import json
 from typing import Dict
 from typing import List
 
+from src.logger_config import setup_logger
+
+logger = setup_logger("utils")
+
 
 def load_transactions(filepath: str) -> List[Dict]:
     """
@@ -17,4 +21,10 @@ def load_transactions(filepath: str) -> List[Dict]:
                 return data
             return []
     except (FileNotFoundError, json.JSONDecodeError):
+        logger.error(f"Не удалось загрузить файл: {filepath}", exc_info=True)
         return []
+
+
+if __name__ == "__main__":
+    logger.info("Тестовая запись в лог")
+    load_transactions("несущ.json")
