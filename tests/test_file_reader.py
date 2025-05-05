@@ -17,7 +17,7 @@ def test_read_transactions_csv(mock_read_csv: MagicMock) -> None:
     )
     mock_read_csv.return_value = mock_df
 
-    result = read_transactions_csv()
+    result = read_transactions_csv("transactions.csv")
 
     assert isinstance(result, list)
     assert len(result) == 2
@@ -35,7 +35,7 @@ def test_read_transactions_excel(mock_read_excel: MagicMock) -> None:
     )
     mock_read_excel.return_value = mock_df
 
-    result = read_transactions_excel()
+    result = read_transactions_excel("transactions_excel.xlsx")
 
     assert isinstance(result, list)
     assert len(result) == 2

@@ -6,15 +6,15 @@ from typing import List
 import pandas as pd
 
 
-def read_transactions_csv() -> List[Dict[Hashable, Any]]:
-    """Считывает транзакции из файла transactions.csv с помощью pandas."""
-    df = pd.read_csv("transactions.csv")
+def read_transactions_csv(path: str) -> List[Dict[Hashable, Any]]:
+    """Считывает транзакции из файла по указанному пути с помощью pandas."""
+    df = pd.read_csv(path)
     return df.to_dict(orient="records")
 
 
-def read_transactions_excel() -> List[Dict[Hashable, Any]]:
-    """Считывает транзакции из файла transactions_excel.xlsx с помощью pandas."""
-    df = pd.read_excel("transactions_excel.xlsx")
+def read_transactions_excel(path: str) -> List[Dict[Hashable, Any]]:
+    """Считывает транзакции из файла по указанному пути с помощью pandas."""
+    df = pd.read_excel(path)
     return df.to_dict(orient="records")
 
 
