@@ -1,69 +1,85 @@
-from src.external_api import convert_to_rub
-from src.generators import card_number_generator
+from src.file_reader import read_transactions_csv, read_transactions_excel
+from src.search import search_transactions_by_description
+
+from src.widget import mask_account_card, get_date
+
 from src.generators import filter_by_currency
-from src.generators import transaction_descriptions
-from src.generators import transaction_list
-from src.masks import get_mask_account
-from src.masks import get_mask_card_number
-from src.processing import filter_by_state
-from src.processing import sort_by_date
+from src.processing import filter_by_state, sort_by_date
 from src.utils import load_transactions
-from src.widget import get_date
-from src.widget import mask_account_card
 
-# Проверка функции маскировки номера карты
-print(get_mask_card_number("1234567891234678"))
-
-# Проверка функции маскировки номера счета
-print(get_mask_account("12345678901234567890"))
-
-# Тестовые данные
-transactions = [
-    {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
-    {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
-    {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
-    {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
-]
-
-# Проверка функции фильтрации по статусу
-filtered_transactions = filter_by_state(transactions)
-print("Отфильтрованные транзакции (EXECUTED):", filtered_transactions)
-
-# Проверка функции сортировки по дате
-sorted_transactions = sort_by_date(transactions)
-print("Отсортированные транзакции (по убыванию):", sorted_transactions)
-
-# Проверка функции маскировки карты или счета по строке
-try:
-    print(mask_account_card("Visa Platinum 7000792289606361"))  # номер карты
-    print(mask_account_card("Счет 12345678901234567890"))  # номер счета
-except ValueError as e:
-    print("Ошибка:", e)
-
-# Проверка функции преобразования даты
-print(get_date("2024-03-11T02:26:18.671407"))
-
-# Вызов filter_by_currency
-print("=== Транзакции в валюте USD ===")
-currency_result = filter_by_currency(transaction_list, currency="USD")
-for tx in currency_result:
-    print(tx)
-
-# Вызов transaction_descriptions
-print("\n=== Описания всех транзакций ===")
-descriptions = transaction_descriptions(transaction_list)
-for desc in descriptions:
-    print(desc)
-
-# Вызов card_number_generator
-print("\n=== Генерация номеров карт от 1 до 5 ===")
-try:
-    for card in card_number_generator(1, 6):
-        print(card)
-except (TypeError, ValueError) as e:
-    print(f"Ошибка при генерации номеров карт: {e}")
+AVAILABLE_STATUSES = {"EXECUTED", "CANCELED", "PENDING"}
 
 
-data = load_transactions("data/operations.json")
-for tx in data:
-    print(convert_to_rub(tx))
+def main():
+    print("Привет! Добро пожаловать в программу работы с банковскими транзакциями.")
+    print("Выберите необходимый пункт меню:")
+    print("1. Получить информацию о транзакциях из JSON-файла")
+    print("2. Получить информацию о транзакциях из CSV-файла")
+    print("3. Получить информацию о транзакциях из XLSX-файла")
+
+    file_type = input("Пользователь: ")
+    transactions = []
+
+    if file_type == "1":
+        print("Программа: Для обработки выбран JSON-файл.")
+        transactions = load_transactions("data/operations.json")
+    elif file_type == "2":
+        print("Программа: Для обработки выбран CSV-файл.")
+        transactions = read_transactions_csv("src/transactions.csv")
+    elif file_type == "3":
+        print("Программа: Для обработки выбран XLSX-файл.")
+        transactions = read_transactions_excel("src/transactions_excel.xlsx")
+    else:
+        print("Программа: Некорректный выбор. Завершение работы.")
+        return
+
+    while True:
+        print("\nВведите статус, по которому необходимо выполнить фильтрацию.")
+        print("Доступные для фильтровки статусы: EXECUTED, CANCELED, PENDING")
+        status = input("Пользователь: ").upper()
+        if status in AVAILABLE_STATUSES:
+            print(f"Программа: Операции отфильтрованы по статусу \"{status}\"")
+            transactions = filter_by_state(transactions, status)
+            break
+        else:
+            print(f"Программа: Статус операции \"{status}\" недоступен.")
+
+    if not transactions:
+        print("Программа: Не найдено ни одной транзакции, подходящей под ваши условия фильтрации")
+        return
+
+    sort_answer = input("Программа: Отсортировать операции по дате? Да/Нет\nПользователь: ").lower()
+    if sort_answer == "да":
+        order = input("Программа: Отсортировать по возрастанию или по убыванию?\nПользователь: ").lower()
+        reverse = order == "по убыванию"
+        transactions = sort_by_date(transactions, reverse=reverse)
+
+    currency_answer = input("Программа: Выводить только рублевые транзакции? Да/Нет\nПользователь: ").lower()
+    if currency_answer == "да":
+        transactions = filter_by_currency(transactions, "руб")
+
+    desc_filter = input("Программа: Отфильтровать список транзакций по определенному слову в описании? Да/Нет\nПользователь: ").lower()
+    if desc_filter == "да":
+        keyword = input("Введите слово для фильтрации по описанию: ")
+        transactions = list(search_transactions_by_description(transactions, keyword))
+
+    if not transactions:
+        print("Программа: Не найдено ни одной транзакции, подходящей под ваши условия фильтрации")
+        return
+
+    print("\nПрограмма: Распечатываю итоговый список транзакций...")
+    print(f"\nВсего банковских операций в выборке: {len(transactions)}\n")
+    for tx in transactions:
+        raw_date = tx.get("date", "")
+        date = get_date(raw_date) if raw_date else ""
+        desc = tx.get("description", "")
+        from_raw = tx.get("from", "")
+        to_raw = tx.get("to", "")
+        from_acc = mask_account_card(from_raw) if from_raw else ""
+        to_acc = mask_account_card(to_raw) if to_raw else ""
+        amount = tx.get("amount", 0)
+        currency = tx.get("currency", "")
+        print(f"{date} {desc}\n{from_acc} -> {to_acc}\nСумма: {amount} {currency}\n")
+
+if __name__ == "__main__":
+    main()
